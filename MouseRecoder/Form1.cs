@@ -58,6 +58,7 @@ namespace MouseRecoder
             mh.Click += MouseClickEvent;
             mh.Start();
             image = new Bitmap(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width, System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height);
+            pictureBox1.Image = image;
             graphics = Graphics.FromImage(image);
             pen = new Pen(Color.Black, 1);
         }
@@ -117,12 +118,18 @@ namespace MouseRecoder
                 return;
             }
             graphics.DrawLine(pen, prevPos.X / 2, prevPos.Y, e.Location.X, e.Location.Y);
+            pictureBox1.Refresh();
             prevPos = e.Location;
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             this.Opacity = (double)trackBar1.Value / trackBar1.Maximum;
+        }
+
+        private void button_save_Click(object sender, EventArgs e)
+        {
+            image.Save("D:/mouse_path.png");
         }
     }
 }
