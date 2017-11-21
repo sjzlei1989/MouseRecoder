@@ -117,7 +117,7 @@ namespace MouseRecoder
             if(e.Location == prevPos) {
                 return;
             }
-            graphics.DrawLine(pen, prevPos.X / 2, prevPos.Y, e.Location.X, e.Location.Y);
+            graphics.DrawLine(pen, prevPos.X, prevPos.Y, e.Location.X, e.Location.Y);
             pictureBox1.Refresh();
             prevPos = e.Location;
         }
@@ -129,7 +129,8 @@ namespace MouseRecoder
 
         private void button_save_Click(object sender, EventArgs e)
         {
-            image.Save("D:/mouse_path.png");
+            string str = string.Format("\\mouse_path_{0}_{1}_{2}_{3}{4}{5}{6}.png", System.DateTime.Now.Year, System.DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second, DateTime.Now.Millisecond);
+            image.Save(Application.StartupPath + str);
         }
     }
 }

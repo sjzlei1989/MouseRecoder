@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("MouseRecoder")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("记录鼠标按键点击次数和移动轨迹")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("china")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("MouseRecoder")]
-[assembly: AssemblyCopyright("Copyright © china 2017")]
+[assembly: AssemblyCopyright("Copyright © Xiaolei 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
