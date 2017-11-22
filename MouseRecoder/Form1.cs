@@ -60,6 +60,7 @@ namespace MouseRecoder
             image = new Bitmap(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width, System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height);
             pictureBox1.Image = image;
             graphics = Graphics.FromImage(image);
+            graphics.Clear(Color.White); //使用白色填充整张图片, 即白色背景上画黑色的线
             pen = new Pen(Color.Black, 1);
         }
 
